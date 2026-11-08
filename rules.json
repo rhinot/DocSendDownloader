@@ -9,18 +9,15 @@
                 "header": "Access-Control-Allow-Origin",
                 "operation": "set",
                 "value": "*"
-                },
-                {
-                "header": "Access-Control-Allow-Methods",
-                "operation": "set",
-                "value": "GET, OPTIONS"
                 }
             ]
         },
         "condition": {
-            "urlFilter": "|https://*cloudfront.net/*",
-            "resourceTypes": ["image", "xmlhttprequest"]
-            
+            "urlFilter": "|https://",
+            "requestDomains": ["cloudfront.net"],
+            "initiatorDomains": ["docsend.com", "docsend.dropbox.com"],
+            "requestMethods": ["get"],
+            "resourceTypes": ["xmlhttprequest"]
         }
     }
 ]

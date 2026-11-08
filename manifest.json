@@ -1,12 +1,12 @@
 {
   "name": "DocSend Slide Deck Downloader",
-  "version": "2.0",
+  "version": "2.1.0",
   "description": "Download any DocSend slide deck as a PDF",
   "permissions": ["declarativeNetRequestWithHostAccess", "scripting"],
   "host_permissions": [
-    "*://*.docsend.com/",
-    "*://*.cloudfront.net/*",
-    "*://*.docsend.dropbox.com/*"
+    "https://*.docsend.com/*",
+    "https://*.cloudfront.net/*",
+    "https://*.docsend.dropbox.com/*"
   ],
   "background": {
     "service_worker": "service_worker.js",
